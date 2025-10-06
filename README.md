@@ -2,6 +2,7 @@
 
 <p align="justify">
 Proyek ini merupakan tugas besar untuk mata kuliah Implementasi dan Pengujian Perangkat Lunak, dengan fokus pada penerapan konsep-konsep yang telah dipelajari sebelumnya, seperti analisis kebutuhan, perancangan sistem, hingga implementasi dan evaluasi usability. Sistem yang dikembangkan bernama “Drainase Pintar untuk Mitigasi Banjir di Ketintang”, sebuah sistem informasi berbasis web yang dirancang untuk memantau kondisi drainase secara real-time serta menerima laporan langsung dari warga. Tujuan utama dari proyek ini adalah menciptakan solusi digital yang membantu masyarakat dan pihak pengelola lingkungan dalam mengantisipasi potensi banjir melalui pemantauan data dan pelaporan berbasis komunitas.
+</p>
 
 Sistem ini dikembangkan karena permasalahan drainase dan banjir masih menjadi isu rutin di kawasan Ketintang, terutama ketika curah hujan tinggi dan sistem saluran air tidak berfungsi optimal. Warga seringkali tidak tahu harus melapor ke mana ketika menemukan saluran mampet, air meluap, atau sensor ketinggian air menunjukkan kondisi berbahaya. Oleh karena itu, sistem ini berperan sebagai jembatan antara masyarakat dan instansi terkait, di mana warga dapat melaporkan kondisi di lapangan melalui aplikasi, sementara sistem akan menampilkan data sensor air secara real-time dan mengirimkan notifikasi peringatan dini jika terjadi potensi banjir.
 
