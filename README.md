@@ -36,13 +36,4 @@ Secara keseluruhan, proyek ini tidak hanya menjadi latihan akademik, tetapi juga
 ---
 
 ## 📁 Struktur Folder
-sistem-drainase-pintar/
-├─ pspec/ # Implementasi PSPEC per anggota
-│ ├─ 1203230030-khusnia/
-│ ├─ 1203230058-assyifa/
-│ └─ 1203230076-fajri/
-├─ frontend/ # Tampilan HTML/CSS/JS
-├─ docs/ # Dokumen RPL, class diagram, database schema
-├─ backend/ # Kode logika sistem
-├─ figma/ # Desain UI/UX (link/screenshot)
-└─ README.md # Penjelasan proyek
+sistem-drainase-pintar/ ├─ pspec/ # Implementasi PSPEC per anggota │ ├─ 1203230030-khusnia/ │ ├─ 1203230058-assyifa/ │ └─ 1203230076-fajri/ ├─ frontend/ # Tampilan HTML/CSS/JS ├─ docs/ # Dokumen RPL, class diagram, database schema ├─ backend/ # Kode logika sistem ├─ figma/ # Desain UI/UX (link/screenshot) └─ README.md # Penjelasan proyek
