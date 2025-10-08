@@ -48,3 +48,41 @@ sistem-drainase-pintar/
 ├─ figma/ # Desain UI/UX (link/screenshot)
 └─ README.md # Penjelasan proyek
 ```
+
+```
+sistem-drainase-pintar/
+├─ backend/
+│  ├─ app/
+│  │  ├─ __init__.py
+│  │  ├─ main.py
+│  │  ├─ database.py
+│  │  ├─ models.py
+│  │  ├─ schemas.py
+│  │  ├─ crud.py
+│  │  ├─ auth.py
+│  │  ├─ routers/
+│  │  │  ├─ auth.py
+│  │  │  ├─ reports.py
+│  │  │  └─ comments.py
+│  ├─ requirements.txt
+│  ├─ Dockerfile
+│  └─ alembic/  (optional for migrations)
+├─ frontend/
+│  ├─ package.json
+│  ├─ vite.config.js
+│  ├─ tailwind.config.js
+│  ├─ src/
+│  │  ├─ main.jsx
+│  │  ├─ App.jsx
+│  │  ├─ pages/
+│  │  │  ├─ Login.jsx
+│  │  │  ├─ Register.jsx
+│  │  │  ├─ Dashboard.jsx
+│  │  │  ├─ ReportForm.jsx
+│  │  ├─ services/
+│  │  │  └─ api.js
+│  └─ public/
+├─ docker-compose.yml
+├─ .env.example
+└─ README.md
+```
