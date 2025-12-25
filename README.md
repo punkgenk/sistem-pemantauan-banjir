@@ -26,7 +26,7 @@ Dengan adanya Sistem Pemantauan dan Pelaporan Banjir ini, diharapkan proses pela
 
 ---
 
-## 👥 Anggota Kelompok
+## Anggota Kelompok
 | Nama | NIM | Tugas |
 |------|------|-------|
 | Khusnia Fitri | 1203230030 | Desain UI & Dokumentasi |
@@ -35,7 +35,105 @@ Dengan adanya Sistem Pemantauan dan Pelaporan Banjir ini, diharapkan proses pela
 
 ---
 
-## 📁 Struktur Folder
+## Daftar Isi
+1. [Fitur Aplikasi](#fitur-aplikasi)
+2. [Prasyarat](#prasyarat)
+3. [Instalasi](#instalasi)
+4. [Struktur Proyek](#struktur-proyek)
+5. [Menjalankan Aplikasi](#menjalankan-aplikasi)
+
+---
+
+## Fitur Aplikasi
+Berdasarkan ide dan proposal tugas besar, aplikasi ini menyediakan fitur-fitur berikut:
+
+### Autentikasi dan Otorisasi
+- Login dan registrasi pengguna
+- Role-based access control:
+  - Masyarakat
+  - Pemerintah
+- Pengelolaan sesi pengguna secara aman
+
+### Pelaporan Banjir
+- Masyarakat dapat melaporkan kejadian banjir atau genangan air
+- Laporan berisi informasi lokasi, deskripsi kejadian, dan waktu pelaporan
+- Data laporan tersimpan di sistem dan dapat dipantau oleh petugas
+
+### Pemantauan dan Status Laporan
+- Pemerintah dapat melihat seluruh laporan yang masuk
+- Update status laporan sesuai progres penanganan
+- Monitoring laporan melalui dashboard
+
+### Komunikasi
+- Fitur komunikasi antara masyarakat dan pemerintah
+- Memberikan tanggapan atau klarifikasi terhadap laporan
+- Mendukung interaksi dua arah melalui sistem
+
+### Dashboard Monitoring
+- Dashboard ringkasan kondisi banjir
+- Menampilkan data laporan secara terstruktur
+- Mendukung pengambilan keputusan oleh petugas
+
+---
+
+## Prasyarat
+Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
+
+### Backend
+- PHP 8.1 atau lebih tinggi
+- Composer
+- Framework Laravel
+
+### Database
+- SQLite (default)
+- MySQL (opsional)
+
+### Frontend
+- Node.js versi 16 atau lebih tinggi
+- NPM
+
+### Tools Pendukung
+- Git
+- Visual Studio Code (disarankan)
+
+### Sistem Operasi
+- Windows / Linux / macOS
+
+---
+
+## Instalasi
+
+1. Clone Repository
+```bash
+git clone https://github.com/username/sistem-pemantauan-banjir.git
+cd sistem-pemantauan-banjir
+```
+2. Install Dependency Backend
+```bash
+composer install
+```
+3. Konfigurasi Environment
+```bash
+copy .env.example .env
+php artisan key:generate
+```
+4. Konfigurasi Database (SQLite)
+Buat file database:
+
+```bash
+type nul > database\database.sqlite
+```
+Lalu jalankan migrasi:
+
+```bash
+php artisan migrate
+```
+5. Install Dependency Frontend
+```bash
+npm install
+```
+
+## Struktur Proyek
 ```
 sistem-pemantauan-banjir-main/
 ├── .editorconfig
@@ -139,4 +237,22 @@ sistem-pemantauan-banjir-main/
     │   └── ReportStatusTest.php
     └── Unit/
         └── ExampleTest.php
+```
+
+## Menjalankan Aplikasi
+Aplikasi dijalankan menggunakan dua terminal:
+
+Terminal 1 – Backend
+```bash
+php artisan serve
+```
+
+Terminal 2 – Frontend
+```bash
+npm run dev
+```
+
+Akses aplikasi melalui browser:
+```bash
+http://127.0.0.1:8000
 ```
