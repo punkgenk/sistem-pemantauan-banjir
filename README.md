@@ -114,15 +114,14 @@ php artisan key:generate
 ```
 4. Konfigurasi Database (SQLite)
 Buat file database:
-
 ```bash
 type nul > database\database.sqlite
 ```
 Lalu jalankan migrasi:
-
 ```bash
 php artisan migrate
 ```
+
 5. Install Dependency Frontend
 ```bash
 npm install
