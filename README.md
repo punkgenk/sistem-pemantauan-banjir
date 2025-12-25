@@ -97,35 +97,34 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
 
 
 ## Instalasi
-
 1. Clone Repository
-```bash
-git clone https://github.com/username/sistem-pemantauan-banjir.git
-cd sistem-pemantauan-banjir
-```
+   ```bash
+   git clone https://github.com/username/sistem-pemantauan-banjir.git
+   cd sistem-pemantauan-banjir
+   ```
 2. Install Dependency Backend
-```bash
-composer install
-```
+   ```bash
+   composer install
+   ```
 3. Konfigurasi Environment
-```bash
-copy .env.example .env
-php artisan key:generate
-```
+   ```bash
+   copy .env.example .env
+   php artisan key:generate
+   ```
 4. Konfigurasi Database (SQLite)
-Buat file database:
-```bash
-type nul > database\database.sqlite
-```
-Lalu jalankan migrasi:
-```bash
-php artisan migrate
-```
+   Buat file database:
+   ```bash
+   type nul > database\database.sqlite
+   ```
+   Lalu jalankan migrasi:
+   ```bash
+   php artisan migrate
+   ```
 
 5. Install Dependency Frontend
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 ## Struktur Proyek
 ```
