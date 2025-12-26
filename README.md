@@ -99,7 +99,7 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
 ## Instalasi
 1. Clone Repository
    ```bash
-   git clone https://github.com/username/sistem-pemantauan-banjir.git
+   https://github.com/fajridwi/sistem-pemantauan-banjir.git
    cd sistem-pemantauan-banjir
    ```
 2. Install Dependency Backend
