@@ -23,7 +23,7 @@
         {{-- Header --}}
         <div class="p-6 text-xl font-bold border-b border-emerald-600">
             <i class="fa-solid fa-building-columns mr-2"></i>
-            Sistem Pemantauan Banjir
+            Sistem Drainase Pintar
             <p class="text-sm font-normal text-emerald-200 mt-1">Pemerintah</p>
         </div>
 
