@@ -27,7 +27,7 @@
                     class="mx-auto w-36 h-36 mb-4">
 
                 <h1 class="text-3xl font-bold text-blue-700">
-                    Sistem Pemantauan Banjir
+                    Sistem Drainase Pintar
                 </h1>
                 <p class="text-gray-500 mt-1">Login ke sistem</p>
             </div>
