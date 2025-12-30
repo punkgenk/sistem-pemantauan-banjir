@@ -111,17 +111,21 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
    copy .env.example .env
    php artisan key:generate
    ```
-4. Konfigurasi Database
-   
+4. Konfigurasi Database via MySQL / phpMyAdmin.
    * Buat file database:
-   ```bash
-   CREATE DATABASE pemantauan_banjir;
-   ```
-   Lalu jalankan migrasi:
-   ```bash
-   php artisan migrate
-   ```
-
+     ```bash
+     CREATE DATABASE pemantauan_banjir;
+     ```
+   * Clear Cache Config:
+     ```bash
+     php artisan config:clear
+     php artisan cache:clear
+     php artisan optimize:clear
+     ```
+   * jalankan migrasi:
+     ```bash
+     php artisan migrate
+     ```
 6. Install Dependency Frontend
    ```bash
    npm install
