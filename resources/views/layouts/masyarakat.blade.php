@@ -25,7 +25,7 @@
         {{-- Logo / Judul --}}
         <div class="p-6 text-xl font-bold border-b border-blue-600">
             <i class="fa-solid fa-water mr-2"></i>
-            Sistem Pemantauan Banjir
+            Sistem Drainase Pintar
             <p class="text-sm font-normal text-blue-200 mt-1">
                 Masyarakat
             </p>
