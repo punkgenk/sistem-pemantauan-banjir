@@ -108,6 +108,7 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
    ```
 3. Konfigurasi Environment
    ```bash
+   copy .env.example .env
    php artisan key:generate
    ```
 4. Konfigurasi Database (SQLite)
