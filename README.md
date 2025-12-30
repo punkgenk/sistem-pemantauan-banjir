@@ -111,17 +111,18 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
    copy .env.example .env
    php artisan key:generate
    ```
-4. Konfigurasi Database (SQLite)
-   Buat file database:
+4. Konfigurasi Database
+   
+   * Buat file database:
    ```bash
-   type nul > database\database.sqlite
+   CREATE DATABASE pemantauan_banjir;
    ```
    Lalu jalankan migrasi:
    ```bash
    php artisan migrate
    ```
 
-5. Install Dependency Frontend
+6. Install Dependency Frontend
    ```bash
    npm install
    ```
