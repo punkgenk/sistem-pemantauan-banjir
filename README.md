@@ -134,6 +134,7 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
 ## Struktur Proyek
 ```
 sistem-pemantauan-banjir/
+│
 ├── .editorconfig
 ├── .env.example
 ├── .gitattributes
@@ -233,6 +234,7 @@ sistem-pemantauan-banjir/
     │   ├── RegisterTest.php
     │   ├── ReportTest.php
     │   └── ReportStatusTest.php
+    │
     └── Unit/
         └── ExampleTest.php
 ```
