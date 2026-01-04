@@ -133,7 +133,7 @@ Untuk menjalankan aplikasi ini, diperlukan perangkat lunak berikut:
 
 ## Struktur Proyek
 ```
-sistem-pemantauan-banjir-main/
+sistem-pemantauan-banjir/
 ├── .editorconfig
 ├── .env.example
 ├── .gitattributes
