@@ -71,6 +71,7 @@
                                    class="w-full border rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition" required>
                         </div>
                     </div>
+                    <x-input-error :messages="$errors->get('name')" class="mt-1 text-sm text-red-600" />
 
                     <div>
                         <label class="block text-gray-700 font-medium mb-1">Email</label>
@@ -80,6 +81,7 @@
                                    class="w-full border rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition" required>
                         </div>
                     </div>
+                    <x-input-error :messages="$errors->get('email')" class="mt-1 text-sm text-red-600" />
                 </div>
 
                 <!-- Kolom Kanan: Password & Konfirmasi -->
@@ -92,6 +94,7 @@
                                    class="w-full border rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition" required>
                         </div>
                     </div>
+                    <x-input-error :messages="$errors->get('password')" class="mt-1 text-sm text-red-600" />
 
                     <div>
                         <label class="block text-gray-700 font-medium mb-1">Konfirmasi Password</label>
@@ -101,6 +104,7 @@
                                    class="w-full border rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition" required>
                         </div>
                     </div>
+                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-1 text-sm text-red-600" />
                 </div>
 
             </div>
