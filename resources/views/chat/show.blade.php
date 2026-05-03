@@ -7,6 +7,27 @@
 
 <div class="max-w-4xl mx-auto flex flex-col h-[80vh] bg-white rounded-xl shadow overflow-hidden">
 
+{{-- CHATBOT PANEL --}}
+<div class="max-w-4xl mx-auto mt-4 bg-white rounded-xl shadow overflow-hidden">
+    <div class="px-6 py-3 bg-emerald-600 text-white font-semibold flex items-center gap-2">
+        <i class="fa-solid fa-robot"></i> Tanya Chatbot Banjir
+    </div>
+
+    <div id="chatbotBox" class="px-4 py-4 space-y-3 max-h-60 overflow-y-auto bg-gray-50">
+        <p class="text-sm text-gray-400 text-center">Tanyakan seputar banjir, evakuasi, atau informasi darurat.</p>
+    </div>
+
+    <div class="border-t px-4 py-3 flex gap-2 bg-white">
+        <input type="text" id="chatbotInput"
+               placeholder="Contoh: Apa yang harus dilakukan saat banjir?"
+               class="flex-1 border rounded-lg px-4 py-2 text-sm focus:ring-emerald-500">
+        <button onclick="askChatbot()"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
     {{-- HEADER --}}
     <div class="px-6 py-4 border-b flex items-center gap-3 bg-gray-50">
         <img src="https://ui-avatars.com/api/?name={{ $conversation->otherUser()->name }}"
@@ -95,6 +116,48 @@
 
 {{-- JS --}}
 <script>
+
+    async function askChatbot() {
+    const input = document.getElementById('chatbotInput');
+    const box = document.getElementById('chatbotBox');
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    // Tampilkan pesan user
+    box.innerHTML += `<div class="flex justify-end"><div class="bg-emerald-100 text-sm rounded-xl px-4 py-2 max-w-xs">${msg}</div></div>`;
+    input.value = '';
+    box.scrollTop = box.scrollHeight;
+
+    // Loading indicator
+    box.innerHTML += `<div id="botLoading" class="flex justify-start"><div class="bg-white text-sm rounded-xl px-4 py-2 max-w-xs text-gray-400 shadow">Mengetik...</div></div>`;
+    box.scrollTop = box.scrollHeight;
+
+    try {
+        const res = await fetch('{{ route("chatbot.ask") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({ message: msg })
+        });
+
+        const data = await res.json();
+        document.getElementById('botLoading')?.remove();
+        box.innerHTML += `<div class="flex justify-start"><div class="bg-white text-sm rounded-xl px-4 py-2 max-w-xs shadow">${data.reply}</div></div>`;
+    } catch (e) {
+        document.getElementById('botLoading')?.remove();
+        box.innerHTML += `<div class="flex justify-start"><div class="bg-red-100 text-sm rounded-xl px-4 py-2 max-w-xs">Gagal menghubungi chatbot.</div></div>`;
+    }
+
+    box.scrollTop = box.scrollHeight;
+    }
+
+    // Kirim dengan Enter
+    document.getElementById('chatbotInput')?.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') askChatbot();
+    });
+
     // IMAGE PREVIEW
     const imageInput = document.getElementById('imageInput');
     const previewBox = document.getElementById('imagePreview');

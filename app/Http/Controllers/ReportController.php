@@ -38,12 +38,14 @@ class ReportController extends Controller
 public function store(Request $request)
 {
     $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'latitude' => 'required|numeric',
-        'longitude' => 'required|numeric',
-        'address' => 'nullable|string|max:500',
-        'photo' => 'nullable|image|max:2048',
+    'title'        => 'required|string|max:255',
+    'category'     => 'required|in:genangan,banjir_sedang,banjir_parah',
+    'water_height' => 'nullable|numeric|min:0|max:9999',
+    'description'  => 'required|string',
+    'latitude'     => 'required|numeric',
+    'longitude'    => 'required|numeric',
+    'address'      => 'nullable|string|max:500',
+    'photo'        => 'nullable|image|max:2048',
     ]);
 
     $photoPath = null;
@@ -52,14 +54,16 @@ public function store(Request $request)
     }
 
     $report = Report::create([
-        'user_id' => auth()->id(),
-        'title' => $request->title,
-        'description' => $request->description,
-        'latitude' => $request->latitude,
-        'longitude' => $request->longitude,
-        'address' => $request->address,
-        'photo' => $photoPath,
-        'status' => 'pending',
+    'user_id'      => auth()->id(),
+    'title'        => $request->title,
+    'category'     => $request->category,
+    'water_height' => $request->water_height,
+    'description'  => $request->description,
+    'latitude'     => $request->latitude,
+    'longitude'    => $request->longitude,
+    'address'      => $request->address,
+    'photo'        => $photoPath,
+    'status'       => 'pending',
     ]);
 
     // Trigger event notifikasi ke pemerintah

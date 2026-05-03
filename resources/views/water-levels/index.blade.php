@@ -93,9 +93,37 @@
                 shadowSize: [41,41]
             });
 
+            const statusLabel = {
+                'pending': '<span style="background:#fef08a;color:#854d0e;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;">Pending</span>',
+                'selesai': '<span style="background:#bbf7d0;color:#166534;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;">Selesai</span>',
+                'batal':   '<span style="background:#fecaca;color:#991b1b;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;">Batal</span>',
+            };
+
+            const popupContent = `
+                <div style="min-width:200px;font-family:Arial,sans-serif;">
+                    <div style="background:#1d4ed8;color:white;padding:8px 12px;border-radius:8px 8px 0 0;margin:-14px -20px 10px -20px;">
+                        <b style="font-size:13px;">🌊 ${r.title}</b>
+                    </div>
+                    <table style="width:100%;font-size:12px;border-collapse:collapse;">
+                        <tr>
+                            <td style="padding:3px 0;color:#6b7280;">👤 Pelapor</td>
+                            <td style="padding:3px 0;font-weight:600;">${r.name}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:3px 0;color:#6b7280;">📍 Alamat</td>
+                            <td style="padding:3px 0;">${r.address}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:3px 0;color:#6b7280;">📌 Status</td>
+                            <td style="padding:3px 0;">${statusLabel[r.status] ?? r.status}</td>
+                        </tr>
+                    </table>
+                </div>
+            `;
+
             const marker = L.marker([r.lat, r.lng], {icon})
-                .addTo(map)
-                .bindPopup(`<b>${r.title}</b><br>Pelapor: ${r.name}<br>Alamat: ${r.address}<br>Status: ${r.status}`);
+            .addTo(map)
+            .bindPopup(popupContent, { maxWidth: 250 });
             markerGroup.push(marker);
 
             // Circle radius halus

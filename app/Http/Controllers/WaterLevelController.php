@@ -12,10 +12,6 @@ public function index()
 {
     $query = Report::with('user');
 
-    if(auth()->user()->role === 'masyarakat') {
-        $query->where('status', 'selesai');
-    }
-
     $reports = $query->paginate(5);
 
     $reportMarkers = $reports->map(function($r){

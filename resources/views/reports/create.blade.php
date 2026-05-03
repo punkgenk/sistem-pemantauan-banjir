@@ -104,6 +104,25 @@
             <input type="text" name="title" class="w-full border rounded-lg p-2 focus:ring focus:ring-green-200" required>
         </div>
 
+        {{-- Kategori --}}
+        <div>
+            <label class="block mb-2 font-semibold"><i class="fa-solid fa-layer-group"></i> Kategori Banjir</label>
+            <select name="category" class="w-full border rounded-lg p-2 focus:ring focus:ring-green-200" required>
+                <option value="">-- Pilih Kategori --</option>
+                <option value="genangan">Genangan</option>
+                <option value="banjir_sedang">Banjir Sedang</option>
+                <option value="banjir_parah">Banjir Parah</option>
+            </select>
+        </div>
+
+        {{-- Tinggi Air --}}
+        <div>
+            <label class="block mb-2 font-semibold"><i class="fa-solid fa-water"></i> Estimasi Tinggi Air (cm)</label>
+            <input type="number" name="water_height" min="0" max="9999"
+                class="w-full border rounded-lg p-2 focus:ring focus:ring-green-200"
+                placeholder="Contoh: 30">
+        </div>
+
         {{-- Foto --}}
         <div>
             <label class="block mb-2 font-semibold"><i class="fa-solid fa-image"></i> Foto (Opsional)</label>

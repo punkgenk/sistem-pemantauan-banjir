@@ -8,7 +8,7 @@ use App\Http\Controllers\AdminReportController;
 use App\Http\Controllers\WaterLevelController;
 use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\MessageController;
-
+use App\Http\Controllers\ChatbotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/chat', [ConversationController::class, 'index'])->name('chat.index');
     Route::get('/chat/{user}', [ConversationController::class, 'show'])->name('chat.show');
     Route::post('/chat/{conversation}', [MessageController::class, 'store'])->name('chat.store');
+    Route::post('/chatbot/ask', [ChatbotController::class, 'ask'])->name('chatbot.ask');
 
 });
 
@@ -132,3 +133,5 @@ Route::middleware(['auth'])->group(function () {
 |--------------------------------------------------------------------------
 */
 Route::fallback(fn () => abort(404));
+
+
