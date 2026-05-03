@@ -29,9 +29,9 @@ Dengan adanya Sistem Pemantauan dan Pelaporan Banjir ini, diharapkan proses pela
 | Nama | NIM |
 |------|------|
 | Khusnia Fitri | 1203230030 |
-| Ahmad Assyifa Dzaky Rahman | 1203230058 |
+| Shinta Putri Nirmala | 1203230052 |
 | Muhammad Fajri Dwi Prasetya Subandi | 1203230076 |
-
+| Agnes Destiny Sava Sundjaja | 1203230092 |
 
 ## Daftar Isi
 1. [Fitur Aplikasi](#fitur-aplikasi)
