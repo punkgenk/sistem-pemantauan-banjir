@@ -257,3 +257,5 @@ Akses aplikasi melalui browser:
 ```bash
 http://127.0.0.1:8000
 ```
+Email
+https://mailtrap.io/sandboxes/4671289/messages/5510433057
