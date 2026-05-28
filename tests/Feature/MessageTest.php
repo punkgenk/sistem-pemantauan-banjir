@@ -23,7 +23,7 @@ class MessageTest extends TestCase
         ]);
 
         $this->actingAs($masyarakat)
-            ->post(route('messages.store', $conversation), [
+            ->post(route('chat.store', $conversation), [
                 'message' => 'Mohon segera ditindaklanjuti, air semakin tinggi'
             ]);
 

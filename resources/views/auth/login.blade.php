@@ -50,6 +50,12 @@
                         class="w-full border rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 transition" required>
                 </div>
 
+                <div class="text-right mb-2">
+                    <a href="{{ route('password.request') }}" class="text-sm text-blue-600 hover:underline">
+                        Lupa kata sandi?
+                    </a>
+                </div>
+
                 <button type="submit"
                         class="w-full mt-4 py-3 rounded-lg text-white font-semibold
                             bg-gradient-to-r from-blue-500 to-blue-700
