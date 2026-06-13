@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Report;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminReportController extends Controller
 {
@@ -36,7 +37,7 @@ class AdminReportController extends Controller
     {
         // hapus foto jika ada
         if ($report->photo) {
-            \Storage::disk('public')->delete($report->photo);
+            Storage::disk('public')->delete($report->photo);
         }
 
         $report->delete();
